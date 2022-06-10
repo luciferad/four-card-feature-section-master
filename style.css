@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+:root {
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9375rem;
+    background-color: var(--very-light-gray);
+}
+/* Header */
+
+header {
+    text-align: center;
+}
+h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--very-dark-blue);
+    padding: 5rem 0 1rem 0;
+}
+span {
+    font-weight: 200;
+}
+header p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grayish-blue);
+    padding: 0 1.7rem 4rem 1.7rem;
+}
+
+/* Cards */
+
+main {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    width: 21rem;
+}
+
+section {
+    width: 20rem;
+    height: 14rem;
+    padding: 1.5rem 1.5rem 0 2rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgb(204, 204, 204);
+    position: relative;
+}
+section img {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+h2 {
+    color: var(--very-dark-blue);
+}
+section p {
+    font-size: 0.9rem;
+    color: var(--grayish-blue);
+}
+#supervisor {
+    border-top: solid var(--cyan) 0.25rem;
+}
+#team_builder {
+    border-top: solid var(--red) 0.25rem;
+}
+#karma {
+    border-top: solid var(--orange) 0.25rem;
+}
+#calculator {
+    border-top: solid var(--blue) 0.25rem;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 2%;
+}
+
+/* Media query */
+
+@media screen and (min-width: 50rem) {
+    main {
+        grid-template-rows: 16rem 16rem;
+        grid-template-columns: 22rem 22rem;
+        grid-gap: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    header p {
+        padding: 0 20vw 4rem 20vw;
+    }
+}
+@media screen and (min-width: 68rem) {
+    main {
+        grid-template-rows: 32rem;
+        grid-template-columns: 21rem 21rem 21rem;
+    }
+    #supervisor {
+        align-self: center;
+    }
+    #team_builder {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #karma {
+        grid-area: 1 / 2 / 2 / 3;
+        align-self: end;
+    }
+    #calculator {
+        align-self:center;
+    }
+    header p {
+        padding: 0 30vw 4rem 30vw;
+    }
+}
