@@ -44,8 +44,8 @@ Users should be able to:
 
 ### What I learned
 
-I designed this page base on mobile-first workflow for the first time. I used _<section>_ instead of _<div>_ in the main body of the page.
-I've figured out that when I have some _<div>_ or _<section>_ in a container, I can simply use **_{display: grid}_** for the container without specifying any tracks. Then every _<div>_ or _<section>_ assigns to a grid area automatically.
+I designed this page base on mobile-first workflow for the first time. I used **_<section>_** instead of **_<div>_** in the main body of the page.
+I've figured out that when I have some **_<div>_** or **_<section>_** in a container, I can simply use **_{display: grid}_** for the container without specifying any tracks. Then every **_<div>_** or **_<section>_** assigns to a grid area automatically.
 
 ```html
 <main>
